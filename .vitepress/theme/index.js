@@ -3,6 +3,7 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import './custom.css'
+import Features from './Features.vue'
 
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import googleAnalytics from 'vitepress-plugin-google-analytics';
@@ -17,6 +18,7 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     DefaultTheme.enhanceApp({ app, router, siteData });
+    app.component('Features', Features);
 
     googleAnalytics({
         id: 'G-GZ14784KJE',
